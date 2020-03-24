@@ -1,0 +1,36 @@
+{
+  "name": "eslint-ts-prettier-airbnb",
+  "version": "0.1.0-alpha",
+  "description": "Code analizer/formater for NodeJS",
+  "main": "index.js",
+  "repository": "https://github.com/wesloker/eslint-ts-prettier-airbnb.git",
+  "author": "Philips QS <wesloker.aqs@gmail.com> (https://backlabs.io)",
+  "license": "MIT",
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*/**/*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.9",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  }
+}
